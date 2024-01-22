@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100&display=swap");
+
+* {
+  font-family: "Roboto" sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  background-color: #000038;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.alphabet {
+  color: white;
+  transition: all ease-in-out;
+  transition-duration: 50ms;
+}
+
+.container:hover .alphabet {
+  color: #dc02cf;
+}

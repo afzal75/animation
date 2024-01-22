@@ -51,13 +51,52 @@
 
 
 
-import "./Loading.css"
+// import "./Loading.css"
+// const App = () => {
+//   return (
+//     <div className="main">
+//       <div className="loading">
+//         <div className="glass"></div>
+//         <div className="box"></div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+// import "./Clip.css"
+// const App = () => {
+//   return (
+//     <div className="main">
+//       <div className="card">
+//         <h1>Heading</h1>
+//         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+//           Laborum ratione non itaque! Expedita, quod temporibus
+//           consectetur sit quae libero. Libero obcaecati
+//           necessitatibus deleniti dolorum, molestias officiis
+//           accusamus enim blanditiis! Culpa.</p>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;
+
+
+import "./Javascript.css"
 const App = () => {
+  const name = "Programming Hero"
+
+  const nameArr = name.split('')
+
   return (
     <div className="main">
-      <div className="loading">
-        <div className="glass"></div>
-        <div className="box"></div>
+      <div className="container">
+        {
+          nameArr.map((item, i) => <span className="alphabet" style={{ transitionDelay: `${i * 30}ms` }}>{item}</span>)
+        }
       </div>
     </div>
   );
