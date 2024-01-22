@@ -1,0 +1,48 @@
+.main {
+  border: 2px solid black;
+  display: flex;
+  /* padding: 20px; */
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+  /* position: relative; */
+  flex-direction: column;
+}
+.box-1 {
+  /* position: absolute; */
+  background-color: red;
+  height: 150px;
+  width: 150px;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  margin: 10px;
+}
+/* .box-container-2 {
+  overflow: hidden;
+} */
+
+.box-2 {
+  /* position: absolute; */
+  background-color: blue;
+  height: 150px;
+  width: 150px;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  /* transform-origin: top left; */
+  /* transform-origin: 40px 50px; */
+  transform-origin: bottom right;
+}
+
+.box-1:hover {
+  /* transform: translateX(-500px); */
+  /* transform: translateY(150px); */
+  /* transform: scale(0.5); */
+  transform: rotate(45deg);
+}
+.box-2:hover {
+  /* transform: translateX(-500px); */
+  /* transform: translateY(150px); */
+  /* transform: scale(0.5); */
+  /* transform: rotate(180deg); */
+  transform: skew(45deg);
+}
