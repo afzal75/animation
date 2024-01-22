@@ -1,4 +1,4 @@
-.main {
+.mains {
   border: 2px solid black;
   display: flex;
   /* padding: 20px; */
@@ -8,7 +8,7 @@
   /* position: relative; */
   flex-direction: column;
 }
-.box-1 {
+.box-1s {
   /* position: absolute; */
   background-color: red;
   height: 150px;
@@ -21,7 +21,7 @@
   overflow: hidden;
 } */
 
-.box-2 {
+.box-2s {
   /* position: absolute; */
   background-color: blue;
   height: 150px;
@@ -33,16 +33,83 @@
   transform-origin: bottom right;
 }
 
-.box-1:hover {
+.box-1:hovers {
   /* transform: translateX(-500px); */
   /* transform: translateY(150px); */
   /* transform: scale(0.5); */
   transform: rotate(45deg);
 }
-.box-2:hover {
+.box-2:hovers {
   /* transform: translateX(-500px); */
   /* transform: translateY(150px); */
   /* transform: scale(0.5); */
   /* transform: rotate(180deg); */
   transform: skew(45deg);
+}
+
+/* 3d Animation */
+
+.mains {
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 500px;
+}
+.box-1 {
+  background-color: red;
+  height: 150px;
+  width: 150px;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  margin: 10px;
+}
+
+.box-1:hover {
+  /* transform: translateZ(100px); */
+  /* transform: rotateY(45deg); */
+  transform: rotateX(90deg);
+}
+
+/* ! Button */
+
+.btn {
+  border: 2px solid tomato;
+  color: tomato;
+  padding: 10px 20px;
+  background-color: transparent;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* transform: translate(100px); */
+  /* transform: rotate(120deg); */
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  transform: scaleY(0);
+  z-index: -1;
+}
+
+.btn:hover {
+  /* transform: scale(1.1); */
+  color: white;
+}
+
+.btn:hover::after {
+  /* transform: translate(0px); */
+  /* transform: rotate(0deg); */
+  transform: scaleX(1);
+  background-color: tomato;
 }
